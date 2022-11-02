@@ -2,26 +2,30 @@ const cellMaker = document.querySelector(".cell-container");
 
 for (let i = 1; i <= 100; i++) {
 
-
+    let num = i;
+    let bgCell = "bg-primary"
     if (i % 3 === 0 && i % 5 === 0) {
-        console.log("FizzBuzz")
-        cellMaker.innerHTML += `<div class="cell fw-bold bg-danger">FizzBuzz</div>`
+        num = "FizzBuzz"
+        console.log(num)
+        bgCell = "bg-danger"
     }
     else if (i % 3 === 0) {
-        console.log("Fizz")
-        cellMaker.innerHTML += `<div class="cell fw-bold bg-success">Fizz</div>`
+        num = "Fizz"
+        console.log(num)
+        bgCell = "bg-success"
     }
     else if (i % 5 === 0) {
-        console.log("Buzz")
-        cellMaker.innerHTML += `<div class="cell fw-bold bg-warning">Buzz</div>`
+        num = "Buzz"
+        console.log(num)
+        bgCell = "bg-warning"
     }
     else {
-        console.log(i)
-        cellMaker.innerHTML += `<div class="cell fw-bold bg-primary">${i}</div>`
+        console.log(num)
+
     }
 
 
-
+    cellMaker.innerHTML += `<div class="cell fw-bold ${bgCell}">${num}</div>`
 
 }
 
